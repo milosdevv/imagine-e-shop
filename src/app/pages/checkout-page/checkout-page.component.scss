@@ -1,0 +1,244 @@
+//form validation
+
+.disabled {
+  opacity: 0.5;
+}
+
+h2 {
+  color: #111827;
+  margin: 0;
+}
+h3 {
+  color: #4b5563;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0;
+}
+.content__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  position: relative;
+  padding: 50px 0;
+  .order__summary {
+    width: 40%;
+    .total__price,
+    .shipping__estimate,
+    .tax {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    button {
+      width: 40%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+form {
+  .line {
+    background-color: #e5e7eb;
+    height: 1px;
+    margin: 10px 0;
+  }
+  label {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  input {
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    padding: 8px 4px;
+    outline: none;
+  }
+}
+
+.checkout__form {
+  padding: 20px 0;
+  .contact__wrapper,
+  .shipping__info-wrapper,
+  .payment__wrapper {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  .contact__info {
+    display: flex;
+    gap: 20px;
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .shipping__info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .personal__info-wrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
+
+  .address {
+    display: flex;
+    gap: 20px;
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .address__info {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
+
+  .location {
+    display: flex;
+    gap: 20px;
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+    .location__wrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .card__detail {
+    display: flex;
+    gap: 20px;
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-width: 425px){
+  .content__wrapper{
+    flex-direction: column;
+    margin: auto;
+    padding: 0;
+    .order__summary{
+      width: 100%;
+      padding: 0 0 25px 0;
+      button{
+        width: 100%;
+        margin: 20px 0;
+      }
+    }
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 0 70px 0;
+  }
+  .checkout__form{
+    padding: 0;
+    .contact__wrapper,
+  .shipping__info-wrapper,
+  .payment__wrapper{
+    width: 100%;
+  }
+  .contact__info{
+    flex-direction: column;
+  }
+  .shipping__info{
+    .personal__info-wrapper{
+      flex-direction: column;
+    }
+    .address{
+      .address__info{
+        flex-direction: column;
+      }
+    }
+    .location__wrapper{
+      flex-direction: column;
+    }
+  }
+  .card__detail{
+    flex-direction: column;
+  }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .content__wrapper{
+    flex-direction: column;
+    margin: auto;
+    padding: 0;
+    .order__summary{
+      width: 100%;
+      padding: 0 0 25px 0;
+      button{
+        width: 100%;
+        margin: 20px 0;
+      }
+    }
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 0 70px 0;
+  }
+  .checkout__form{
+    padding: 0;
+    .contact__wrapper,
+  .shipping__info-wrapper,
+  .payment__wrapper{
+    width: 100%;
+  }
+  .contact__info{
+    flex-direction: column;
+  }
+  .shipping__info{
+    .personal__info-wrapper{
+      flex-direction: column;
+    }
+    .address{
+      .address__info{
+        flex-direction: column;
+      }
+    }
+    .location__wrapper{
+      flex-direction: column;
+    }
+  }
+  .card__detail{
+    flex-direction: column;
+  }
+  }
+}

@@ -1,0 +1,46 @@
+<div class="section">
+  <div class="container">
+    <div class="form__wrapper">
+      <h2>Welcome, Admin!</h2>
+      <app-create-product-form></app-create-product-form>
+      <h3>Add or Delete products</h3>
+      <div class="admin__products-wrapper">
+        <ul>
+          <li *ngFor="let product of products" class="admin__product-card">
+            <div
+              class="admin__product-image"
+              [ngStyle]="{ 'background-image': 'url(' + product.images + ')' }"
+            >
+              <img src="../../../assets/icons/cart-btn.svg" alt="" />
+            </div>
+            <div class="admin__product-text-content">
+              <div class="title__price-wrapper">
+                <p>{{ product.title }}</p>
+                <p>{{ product.price | currency }}</p>
+              </div>
+              <p>{{ product.category.name }}</p>
+              <button class="cta" (click)="deleteSingleProduct(product.id)">
+                Delete
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <h3>Add or Delete categories</h3>
+    <div class="form__wrapper">
+      <app-create-category-form></app-create-category-form>
+    </div>
+    <div class="admin__categories-wrapper">
+      <ul>
+        <li *ngFor="let category of categories" class="admin__product-card">
+          <img [src]="category.image" alt="{{ category.name }}" />
+          {{ category.name }}
+          <button class="cta" (click)="deleteSingleCategory(category.id)">
+            Delete Category
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

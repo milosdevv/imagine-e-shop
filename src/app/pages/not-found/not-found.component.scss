@@ -1,0 +1,25 @@
+.not__found {
+  height: 70vh;
+  margin: auto;
+  display: flex;
+  gap: 20px;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+  color: #111827;
+
+  @media screen and (max-width: 395px) {
+    height: 50vh;
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 425px) {
+    height: 50vh;
+    flex-direction: column;
+  }
+
+  a {
+    color: #111827;
+    text-decoration: none;
+  }
+}

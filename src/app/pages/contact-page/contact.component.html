@@ -1,0 +1,86 @@
+<div class="section">
+  <div class="container">
+    <div class="contact__form-wrapper">
+      <div class="contact__form-text">
+        <h2>Get in touch with us</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, cum
+          sint quia dolore impedit illo blanditiis quis incidunt sequi officia.
+        </p>
+    
+        <div>
+          <h3>Adress</h3>
+          <p>
+            Photo booth tattooed prism, portland taiyaki hoodie neutra typewriter
+          </p>
+        </div>
+    
+        <div>
+          <h3>Email</h3>
+          <p>nextonexample.com</p>
+        </div>
+        <div>
+          <h3>Phone</h3>
+          <p>000-123-456-7890</p>
+        </div>
+        <div class="social__wrapper">
+          <h3>Socials</h3>
+          <div class="socials">
+            <img src="../../../assets/icons/social-icons/facebook.svg" alt="" />
+            <img src="../../../assets/icons/social-icons/youtube.svg" alt="" />
+            <img src="../../../assets/icons/social-icons/telegram.svg" alt="" />
+            <img src="../../../assets/icons/social-icons/twitter.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    
+      <form
+        action=""
+        class="contact__form"
+        (ngSubmit)="onFormSubmitted()"
+        #contactForm="ngForm"
+      >
+        <div>
+          <label for="name"></label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Full Name"
+            #fullName="ngModel"
+            ngModel
+            required
+          />
+          <small *ngIf="fullName.invalid && fullName.touched"
+            >You must enter full name</small
+          >
+        </div>
+    
+        <div>
+          <label for="email"></label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email Address"
+            #email="ngModel"
+            ngModel
+            required
+          />
+          <small *ngIf="email.invalid && email.touched"
+            >You must enter valid email adress</small
+          >
+        </div>
+    
+        <div>
+          <label for="message"></label>
+          <textarea name="message" id="message" placeholder="Message"></textarea>
+        </div>
+    
+        <button type="submit" class="cta" value="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+</div>
+

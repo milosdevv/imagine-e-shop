@@ -1,0 +1,33 @@
+<div class="section">
+  <div class="container">
+    <div class="product__page-display">
+      <app-categories></app-categories>
+      <div class="sidebar__categories">
+        <ul class="products__display">
+          <li *ngFor="let product of products">
+            <div class="product__list-item">
+              <a
+                [routerLink]="['/product-item-page', product.id]"
+                class="product__item-cart"
+              >
+                <div
+                  class="product__item-img"
+                  [ngStyle]="{
+                    'background-image': 'url(' + product.images[0] + ')'
+                  }"
+                ></div>
+                <div class="product__text-wrapper">
+                  <div class="product__title-price">
+                    <p>{{ product.title }}</p>
+                    {{ product.price | currency }}
+                  </div>
+                  <button class="cta">View More</button>
+                </div>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

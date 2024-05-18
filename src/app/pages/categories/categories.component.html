@@ -1,0 +1,20 @@
+<div class="categories">
+  <div class="container">
+    <h2><span>Start exploring.</span> Good things are waiting for you</h2>
+    <div class="categoires__wrapper">
+      <a
+        class="category"
+        *ngFor="let category of categories"
+        (click)="navigateToCategory(category.id)"
+      >
+        <div class="category__text-wrapper">
+          <h3>{{ category.name }}</h3>
+          <button>
+            <div class="divider"></div>
+            View More<img src="../../../assets/icons/arrow.svg" alt="" />
+          </button>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,144 @@
+<div class="hero__bg-wrapper">
+  <div class="container">
+    <div class="hero__wrapper">
+      <div class="hero__wrapper-txt">
+        <span>Starting from: $49.99</span>
+        <h1>Exclusive collection for everyone</h1>
+        <button class="cta hero-cta" routerLink="/products">
+          Explore now
+          <span><img src="../../../assets/icons/search.svg" alt="" /></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="features">
+  <div class="container">
+    <h2>Nexton® always with you</h2>
+    <div class="features__wrapper">
+      <div class="feature__item">
+        <img src="../../../assets/icons/shipping.svg" alt="" />
+        <div>
+          <h3>Free shipping</h3>
+          <p>On orders over $50.00</p>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="feature__item">
+        <img src="../../../assets/icons/return.svg" alt="" />
+        <div>
+          <h3>Very easy to return</h3>
+          <p>Just phone number</p>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="feature__item">
+        <img src="../../../assets/icons/worldwide.svg" alt="" />
+        <div>
+          <h3>Worldwide delivery</h3>
+          <p>Fast delivery worldwide</p>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="feature__item">
+        <img src="../../../assets/icons/refund.svg" alt="" />
+        <div>
+          <h3>Refunds policy</h3>
+          <p>Refunds policy</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-categories></app-categories>
+<div class="discount__products">
+  <div class="container">
+    <h2><span>Recommendations.</span> Best matching products for you</h2>
+
+    <div class="discount__product-card-wrapper">
+      <li
+        *ngFor="let product of products | slice : 0 : 3"
+        class="discount__product-card"
+      >
+        <a routerLink="/products/">
+          <div
+            class="discount__product-image"
+            [ngStyle]="{ 'background-image': 'url(' + product.images + ')' }"
+          >
+            <img src="../../../assets/icons/cart-btn.svg" alt="" />
+          </div>
+          <div class="discount__product-text-content">
+            <div class="title__price-wrapper">
+              <p>{{ product.title }}</p>
+              <p>{{ product.price | currency }}</p>
+            </div>
+            <p>{{ product.category.name }}</p>
+            <button class="cta">View More</button>
+          </div>
+        </a>
+      </li>
+    </div>
+  </div>
+</div>
+
+<div class="discount__products">
+  <div class="container">
+    <h2><span>Best Sellers.</span> Best selling of the month</h2>
+
+    <div class="discount__product-card-wrapper">
+      <li
+        *ngFor="let product of products | slice : 0 : 3"
+        class="discount__product-card"
+      >
+        <a routerLink="/products">
+          <div
+            class="discount__product-image"
+            [ngStyle]="{ 'background-image': 'url(' + product.images + ')' }"
+          >
+            <img src="../../../assets/icons/cart-btn.svg" alt="" />
+          </div>
+          <div class="discount__product-text-content">
+            <div class="title__price-wrapper">
+              <p>{{ product.title }}</p>
+              <p>{{ product.price | currency }}</p>
+            </div>
+            <p>{{ product.category.name }}</p>
+            <button class="cta">View More</button>
+          </div>
+        </a>
+      </li>
+    </div>
+  </div>
+</div>
+
+<div class="banner">
+  <div class="container">
+    <div class="banner__wrapper">
+      <div class="banner__text-wrapper">
+        <span>100% Original Products</span>
+        <h2>
+          The All New Fashion <br />
+          Collection Items
+        </h2>
+        <span>Starting from: $59.99</span>
+        <button class="cta" routerLink="/products">Shop Now</button>
+      </div>
+      <div class="banner__background"></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments">
+  <div class="container">
+    <h2>Our <span>Team.</span></h2>
+    <div class="comments__wrapper">
+      <div class="comment" *ngFor="let user of users | slice : 0 : 3">
+        <img [src]="user.avatar" alt="" />
+        <p>{{ user.name }}</p>
+        <p>{{ user.role }}</p>
+        <p>{{ user.email }}</p>
+      </div>
+    </div>
+  </div>
+</div>

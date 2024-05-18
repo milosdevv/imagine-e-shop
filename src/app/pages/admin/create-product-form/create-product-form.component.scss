@@ -1,0 +1,31 @@
+form {
+  padding: 20px 0;
+  width: 300px;
+  margin: auto;
+  label {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  input,
+  textarea,
+  select,
+  button {
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    padding: 8px 4px;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 250px;
+  }
+  div {
+    margin: 10px 0;
+  }
+  .dropzone {
+    background-color: #111827;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+  }
+}

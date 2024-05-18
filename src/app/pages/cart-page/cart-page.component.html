@@ -1,0 +1,64 @@
+<ng-template #notFound>
+  <app-not-found
+    [visible]="true"
+    notFoundMessage="Your cart is empty!"
+    resetLinkText="Get back to the home page"
+    resetLinkRoute="/"
+  ></app-not-found>
+</ng-template>
+<div class="section">
+  <div class="container" *ngIf="cart && cart.items.length > 0; else notFound">
+    <div class="cart__items-display">
+      <ul>
+        <li *ngFor="let cartItem of cart.items">
+          <div>
+            <img [src]="cartItem.product.images[0]" alt="" />
+          </div>
+          <div>
+            <a>
+              {{ cartItem.product.title }}
+            </a>
+          </div>
+  
+          <div>
+            <select
+              #quantitySelect
+              (change)="changeQuantity(cartItem, quantitySelect.value)"
+            >
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+          <div>
+            {{ cartItem.price | currency }}
+          </div>
+  
+          <div>
+            <button
+              class="remove-button"
+              (click)="removeFromCart(cartItem)"
+              class="cta"
+            >
+              Remove
+            </button>
+          </div>
+        </li>
+      </ul>
+  
+      <div class="checkout">
+        <div class="total-price">
+          {{ cart.totalPrice | currency }}
+        </div>
+        <a
+          [routerLink]="['/checkout', { productId: cartItem?.product?.id }]"
+          class="cta"
+          >continue to checkout</a
+        >
+      </div>
+    </div>
+  </div>
+  
+</div>

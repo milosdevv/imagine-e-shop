@@ -1,0 +1,62 @@
+<div class="navbar__wrapper">
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <a routerLink="home">
+          <img src="../../../assets/navbar/logo.svg" alt="" />
+        </a>
+      </div>
+
+      <div class="navbar__menu">
+        <a routerLink="home">Pocetna</a>
+        <a routerLink="products"> Products </a>
+        <a routerLink="about-us">About us</a>
+      </div>
+
+      <div class="navbar__icons">
+        <a routerLink="login">
+          <img src="../../../assets/navbar/user-btn.svg" alt="" />
+        </a>
+        <a routerLink="cart-page"
+          ><img src="../../../assets/navbar/shop-cart.svg" alt=""
+        /></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mobile__navbar-menu">
+  <div class="mobile__navbar-wrapper">
+    <div class="logo">
+      <a routerLink="home">
+        <img src="../../../assets/navbar/logo-mobile.png" alt="" />
+      </a>
+    </div>
+
+    <div
+      class="hamburger-menu"
+      (click)="toggleMenu()"
+      [ngClass]="{ active: isMenuOpen }"
+    >
+      <div class="hamburger-icon" [ngClass]="{ active: isMenuOpen }">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar__menu" *ngIf="isMenuOpen">
+    <a routerLink="home">Pocetna</a>
+    <a routerLink="products"> Products </a>
+    <a routerLink="about-us">About us</a>
+    <div class="navbar__icons">
+      <a routerLink="login">
+        <img src="../../../assets/navbar/user-btn.svg" alt="" />
+      </a>
+      <a routerLink="cart-page"
+        ><img src="../../../assets/navbar/shop-cart.svg" alt=""
+      /></a>
+    </div>
+  </div>
+</div>

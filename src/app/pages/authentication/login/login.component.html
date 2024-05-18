@@ -1,0 +1,63 @@
+<div class="section">
+  <div class="container">
+    <div class="form__wrapper">
+      <h2>Login</h2>
+      <form action="" (ngSubmit)="onFormSubmitted()" #loginForm="ngForm">
+        <div class="form__input">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            ngModel
+            #email="ngModel"
+            placeholder="example@example.com"
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
+            required
+          />
+          <small *ngIf="email.errors?.required && email.touched">
+            Email is required.
+          </small>
+          <small *ngIf="email.errors?.pattern && email.touched">
+            Please enter a valid email address.
+          </small>
+        </div>
+        <div class="form__input">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="pass"
+            name="password"
+            placeholder="Enter your password"
+            ngModel
+            #password="ngModel"
+            required
+            minlength="6"
+          />
+          <small *ngIf="password.errors?.required && password.touched">
+            Password is required.
+          </small>
+          <small *ngIf="password.errors?.minlength && password.touched">
+            Password must be at least 6 characters long.
+          </small>
+        </div>
+        <button type="submit" class="cta login__cta" value="submit">
+          Continue
+        </button>
+      </form>
+      <div class="divider">
+        <div>
+          <hr />
+        </div>
+        OR
+        <div>
+          <hr />
+        </div>
+      </div>
+      <div class="register__now">
+        <span>New user?</span>
+        <a routerLink="/register">Create an account</a>
+      </div>
+    </div>
+  </div>
+</div>

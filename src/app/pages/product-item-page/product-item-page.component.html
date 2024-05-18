@@ -1,0 +1,35 @@
+<div class="product__item-page">
+  <div class="container">
+    <div class="product__item-page-wrapper">
+      <div *ngIf="product" class="product__item-wrapper">
+        <div>
+          <img [src]="product.images[0]" alt="" />
+        
+        </div>
+        <div class="product__item-description">
+          <h2>{{ product.title }}</h2>
+          <p>{{ product.description }}</p>
+          <p>Price: {{ product.price | currency }}</p>
+          <button (click)="addToCart()" class="cta" routerLink="/cart-page">
+            Add to cart
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="recommended__products-wrapper">
+      <h3>Recommended products</h3>
+      <div class="recommended__products">
+        <a (click)="addToCart()">
+          <div class="reccomended__product" *ngFor="let product of products | slice : 0 : 3">
+            <img [src]="product.images[0]" alt="" />
+            <h2>{{ product.title | descriptionSlice : 3 }}</h2>
+            <p>{{ product.description | descriptionSlice }}</p>
+            <button (click)="addToCart()" class="cta" routerLink="/cart-page">
+              Add to cart
+            </button>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,126 @@
+.product__item-page {
+  display: flex;
+  padding: 50px 0;
+  color: #111827;
+  .product__item-page-wrapper {
+    .product__item-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    padding: 50px 0;
+    img {
+      height: 300px;
+      border-radius: 20px;
+    }
+    .product__item-img {
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}
+
+.recommended__products {
+  a {
+    display: flex;
+    padding: 50px 0;
+    align-items: center;
+    color: #111827;
+    text-decoration: none;
+    .reccomended__product{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  img {
+    height: 300px;
+    border-radius: 20px;
+  }
+}
+@media screen and (max-width: 395px){
+  .product__item-page-wrapper{
+    .product__item-wrapper{
+      flex-direction: column;
+        align-items: center;
+        button{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+        h2 {
+          padding: 20px 0;
+        }
+    }
+  }
+  .recommended__products a{
+    flex-direction: column;
+    gap: 40px;
+    padding: 25px 0;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p {
+        padding: 20px 0;
+      }
+    }
+  }
+}
+@media screen and (max-width: 425px){
+  .product__item-page-wrapper{
+     .product__item-wrapper{
+      flex-direction: column;
+      align-items: center;
+    
+      button {
+        margin: 20px auto;
+      }
+      h2 {
+        padding: 20px 0;
+      }
+    }
+  }
+  .recommended__products a{
+    flex-direction: column;
+    gap: 40px;
+    padding: 25px 0;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p {
+        padding: 20px 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .product__item-page-wrapper{
+     .product__item-wrapper{
+      flex-direction: column;
+      align-items: center;
+    
+      button {
+        margin: 20px auto;
+      }
+      h2 {
+        padding: 20px 0;
+      }
+    }
+  }
+  .recommended__products a{
+    flex-direction: column;
+    gap: 40px;
+    padding: 25px 0;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p {
+        padding: 20px 0;
+      }
+    }
+  }
+}

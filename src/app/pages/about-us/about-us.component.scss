@@ -1,0 +1,38 @@
+.about__us-wrapper {
+  padding-top: 100px;
+
+  .image__content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .about__us-wrapper {
+    .image__content {
+      flex-direction: column;
+      img {
+        height: 300px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .image__content {
+    flex-direction: column;
+    img {
+      height: 300px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .image__content {
+    flex-direction: row;
+    img {
+      height: 300px;
+    }
+  }
+}

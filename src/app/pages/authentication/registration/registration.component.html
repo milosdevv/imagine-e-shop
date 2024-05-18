@@ -1,0 +1,114 @@
+<div class="section">
+  <div class="container">
+    <div class="form__wrapper">
+      <h2>Register</h2>
+      <form action="" (ngSubmit)="onUserFormSubmitted()" #registerForm="ngForm">
+        <div class="form__input">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="example@example.com"
+            name="email"
+            ngModel
+            #email="ngModel"
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
+            required
+          />
+          <small *ngIf="email.errors?.required && email.touched">
+            Email is required.
+          </small>
+          <small *ngIf="email.errors?.pattern && email.touched">
+            Please enter a valid email address.
+          </small>
+        </div>
+        <div class="form__input">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="pass"
+            name="password"
+            minlength="6"
+            ngModel
+            #password="ngModel"
+            required
+          />
+          <small *ngIf="password.errors?.required && password.touched">
+            Password is required.
+          </small>
+          <small *ngIf="password.errors?.minlength && password.touched">
+            Password must be at least 6 characters long.
+          </small>
+        </div>
+
+        <div class="form__input">
+          <label for="password">Password(Again)</label>
+          <input
+            type="password"
+            type="password"
+            id="pass2"
+            name="password2"
+            minlength="6"
+            ngModel
+            #password2="ngModel"
+            required
+          />
+          <small *ngIf="password2.errors?.required && password2.touched">
+            Password is required.
+          </small>
+          <small *ngIf="password2.errors?.minlength && password2.touched">
+            Password must be at least 6 characters long.
+          </small>
+        </div>
+        <button type="submit" class="cta register__cta" value="submit">
+          Continue
+        </button>
+      </form>
+      <div class="divider">
+        <div>
+          <hr />
+        </div>
+        OR
+        <div>
+          <hr />
+        </div>
+      </div>
+      <div class="already__member">
+        <span>Already a member?</span>
+        <a routerLink="/login">
+          <span>Login</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <div class="form__wrapper">
+      <h2>Register as Admin</h2>
+      <form (ngSubmit)="onAdminFormSubmitted()" #adminForm="ngForm">
+        <div class="form__input">
+          <label for="email">Email</label>
+          <input type="email" id="adminEmail" name="email" ngModel required />
+        </div>
+        <div class="form__input">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="adminPassword"
+            name="password"
+            ngModel
+            required
+          />
+        </div>
+        <button type="submit" class="cta register__cta" value="submit">
+          Continue
+        </button>
+        <!-- Other form elements and submit button -->
+      </form>
+
+      <!-- Link to login page -->
+    </div>
+  </div>
+</div>
